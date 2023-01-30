@@ -3,6 +3,7 @@ import Logo from "../../assets/Logo.svg";
 
 import { Box, Image as ChakraImage } from "@chakra-ui/react";
 
+// Application header
 export default function Header() {
   return (
     <Box bg="light.white" maxW="100vw">
