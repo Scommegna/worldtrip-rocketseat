@@ -1,7 +1,12 @@
+import { Box } from "@chakra-ui/react";
+import HeroSection from "../components/HeroSection";
+
 export default function Home() {
   return (
     <>
-      <main>Hello World</main>
+      <Box as="main">
+        <HeroSection />
+      </Box>
     </>
   );
 }

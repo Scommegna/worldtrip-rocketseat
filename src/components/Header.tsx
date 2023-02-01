@@ -1,5 +1,5 @@
 import Image from "next/image";
-import Logo from "../../assets/Logo.svg";
+import Logo from "../../public/Logo.svg";
 
 import { Box, Image as ChakraImage } from "@chakra-ui/react";
 
