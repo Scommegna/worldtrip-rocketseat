@@ -22,6 +22,7 @@ export default function HeroSection() {
           fontWeight="500"
           lineHeight="54px"
           fontSize="2.25rem"
+          mb={5}
         >
           5 Continentes,<br></br> infinitas possibilidades.
         </Heading>
