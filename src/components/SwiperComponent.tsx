@@ -3,8 +3,6 @@ import { Navigation, Pagination, Mousewheel, Keyboard } from "swiper";
 import "swiper/css";
 import "swiper/css/navigation";
 
-import { ChevronLeftIcon, ChevronRightIcon } from "@chakra-ui/icons";
-
 import { Center } from "@chakra-ui/react";
 import SlideComponent from "./SlideComponent";
 
