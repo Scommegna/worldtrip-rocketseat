@@ -28,21 +28,24 @@ export default function SwiperComponent() {
           <SlideComponent id="Europa" description="O Continente mais antigo." />
         </SwiperSlide>
         <SwiperSlide>
-          <SlideComponent id="Africa" description="O Continente mais fodido." />
+          <SlideComponent id="Africa" description="O Continente das savanas." />
         </SwiperSlide>
         <SwiperSlide>
           <SlideComponent
             id="America"
-            description="O Continente mais mexicano."
+            description="O Continente mais brasileiro."
           />
         </SwiperSlide>
         <SwiperSlide>
-          <SlideComponent id="Asia" description="Xing xong." />
+          <SlideComponent
+            id="Asia"
+            description="O Continente mais tecnológico."
+          />
         </SwiperSlide>
         <SwiperSlide>
           <SlideComponent
             id="Antartida"
-            description="O continente mais frio."
+            description="O Continente mais frio."
           />
         </SwiperSlide>
         <SwiperSlide>
