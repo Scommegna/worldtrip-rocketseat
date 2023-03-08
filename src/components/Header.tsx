@@ -22,3 +22,5 @@ export default function Header() {
     </Link>
   );
 }
+
+// if pathname == "/continent/[id]" return button <

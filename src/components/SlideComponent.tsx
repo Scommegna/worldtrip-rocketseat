@@ -13,7 +13,7 @@ export default function SlideComponent({
   description,
 }: SlideComponentProps) {
   return (
-    <Link href={`/pages/continent/${id}`}>
+    <Link href={`/continent/${id}`}>
       <Center
         backgroundImage={`/${id}/Continent-Image.png`}
         backgroundSize="cover"
