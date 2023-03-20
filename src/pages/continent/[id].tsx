@@ -1,12 +1,12 @@
 import {
   Box,
-  Card,
   Container,
   Heading,
   HStack,
   Image as ChakraImage,
   SimpleGrid,
   Text,
+  Tooltip,
   VStack,
 } from "@chakra-ui/react";
 
@@ -14,6 +14,7 @@ import InfoLogo from "../../../public/Info.svg";
 import Image from "next/image";
 
 import { useRouter } from "next/router";
+import CardComponent from "@/src/components/CardComponent";
 
 // Dynamic page for continents
 export default function CountryPage() {
@@ -76,27 +77,60 @@ export default function CountryPage() {
               </Text>
               <Text fontWeight="600" color="dark.black" fontSize="24px">
                 Cidades +100
-                <ChakraImage
-                  as={Image}
-                  src={InfoLogo}
-                  display="inline-block"
-                  marginLeft="7px"
-                />
+                <Tooltip label="Learn more">
+                  <ChakraImage
+                    as={Image}
+                    src={InfoLogo}
+                    display="inline-block"
+                    marginLeft="7px"
+                    cursor="pointer"
+                  />
+                </Tooltip>
               </Text>
             </VStack>
           </HStack>
         </Container>
       </HStack>
       <Box textAlign="left" maxWidth="80%">
-        <Heading fontWeight="500" fontSize="36px">
+        <Heading
+          fontWeight="500"
+          fontSize="36px"
+          display="inline-block"
+          marginBottom="40px"
+        >
           Cidades +100
         </Heading>
         <SimpleGrid columns={4} spacing="45px">
-          <Box bg="tomato" height="80px"></Box>
-          <Box bg="tomato" height="80px"></Box>
-          <Box bg="tomato" height="80px"></Box>
-          <Box bg="tomato" height="80px"></Box>
-          <Box bg="tomato" height="80px"></Box>
+          <CardComponent
+            id={`${id}`}
+            imageNumber="1"
+            city="Londres"
+            country="Reino Unido"
+          />
+          <CardComponent
+            id={`${id}`}
+            imageNumber="2"
+            city="Paris"
+            country="França"
+          />
+          <CardComponent
+            id={`${id}`}
+            imageNumber="3"
+            city="Roma"
+            country="Itália"
+          />
+          <CardComponent
+            id={`${id}`}
+            imageNumber="4"
+            city="Praga"
+            country="República Tcheca"
+          />
+          <CardComponent
+            id={`${id}`}
+            imageNumber="5"
+            city="Amsterdã"
+            country="Holanda"
+          />
         </SimpleGrid>
       </Box>
     </VStack>

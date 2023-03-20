@@ -7,20 +7,16 @@ import Link from "next/link";
 // Application header
 export default function Header() {
   return (
-    <Link href="/">
-      <Box bg="light.white" maxW="100vw">
-        <ChakraImage
-          as={Image}
-          src={Logo}
-          alt="World Trip Banner"
-          display="block"
-          my={0}
-          mx="auto"
-          py={6}
-        />
-      </Box>
-    </Link>
+    <Box as={Link} bg="light.white" maxW="100vw" href="/">
+      <ChakraImage
+        as={Image}
+        src={Logo}
+        alt="World Trip Banner"
+        display="block"
+        my={0}
+        mx="auto"
+        py={6}
+      />
+    </Box>
   );
 }
-
-// if pathname == "/continent/[id]" return button <
