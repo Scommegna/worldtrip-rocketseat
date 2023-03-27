@@ -13,6 +13,7 @@ export default function Header() {
         src={Logo}
         alt="World Trip Banner"
         display="block"
+        w={["120px", "auto"]}
         my={0}
         mx="auto"
         py={6}

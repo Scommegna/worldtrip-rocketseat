@@ -8,28 +8,31 @@ export default function HeroSection() {
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
       backgroundPosition="center center"
-      maxW="100%"
-      h="65vh"
+      h="350px"
       display="flex"
       flexDirection="row"
       alignItems="center"
       justifyContent="space-around"
+      alignSelf="stretch"
     >
-      <Box display="flex" flexDirection="column">
+      <Box display="flex" flexDirection="column" margin={[2, 0]}>
         <Heading
           as="h1"
           color="light.headingAndText"
           fontWeight="500"
-          lineHeight="54px"
-          fontSize="2.25rem"
+          lineHeight={["45px", "54px"]}
+          fontSize={[30, 36]}
           mb={5}
         >
           5 Continentes,<br></br> infinitas possibilidades.
         </Heading>
         <Box>
-          <Text color="light.headingAndText" fontWeight="400" fontSize={20}>
-            Chegou a hora de tirar do papel a viagem que você<br></br> sempre
-            sonhou.
+          <Text
+            color="light.headingAndText"
+            fontWeight="400"
+            fontSize={[14, 20]}
+          >
+            Chegou a hora de tirar do papel a viagem que você sempre sonhou.
           </Text>
         </Box>
       </Box>
