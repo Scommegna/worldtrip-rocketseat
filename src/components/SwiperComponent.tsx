@@ -13,7 +13,7 @@ export default function SwiperComponent() {
       <Center
         as={Swiper}
         margin="0 auto"
-        w="70%"
+        w={["100%", "70%"]}
         h="450px"
         mb={10}
         slidesPerView={1}
