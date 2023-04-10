@@ -32,11 +32,16 @@ export default function CardComponent({
           alt={`${city} Image`}
         />
         <HStack
-          gap="104px"
-          alignItems="baseline"
-          marginRight="24px"
-          marginBottom="24px"
-          marginLeft="24px"
+          gap={["30px", "40px", "50px", "60px", "104px"]}
+          alignItems="center"
+          margin={[
+            "5px 5px 5px 5px",
+            "5px 5px 5px 5px",
+            "10px 10px 10px 10px",
+            "15px 15px 15px 15px",
+            "20px 20px 20px 20px",
+          ]}
+          justifyContent="center"
         >
           <VStack spacing="12px" alignItems="start">
             <Heading
@@ -66,3 +71,5 @@ export default function CardComponent({
     </Card>
   );
 }
+
+// em 1200 mudar para o mobile

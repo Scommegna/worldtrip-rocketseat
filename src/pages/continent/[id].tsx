@@ -7,6 +7,7 @@ import {
   SimpleGrid,
   Text,
   Tooltip,
+  useBreakpointValue,
   VStack,
 } from "@chakra-ui/react";
 
@@ -21,6 +22,13 @@ export default function CountryPage() {
   const router = useRouter();
   const { id } = router.query;
 
+  const isWide = useBreakpointValue({
+    sm: false,
+    md: false,
+    lg: false,
+    xl: true,
+  });
+
   return (
     <VStack as="main" spacing="80px">
       <Container maxWidth="100%" padding="0" position="relative">
@@ -31,10 +39,11 @@ export default function CountryPage() {
         />
         <Text
           position="absolute"
-          top="75%"
-          left="6%"
+          top={isWide ? "75%" : "50%"}
+          left={isWide ? "6%" : "50%"}
+          transform={isWide ? "" : "translate(-50%, -50%)"}
           color="light.headingAndText"
-          fontSize="48px"
+          fontSize={48}
         >
           {id}
         </Text>
@@ -138,3 +147,6 @@ export default function CountryPage() {
 }
 
 // ../../../public/${id}/PageAssets/1.png
+
+// Primeira coisa: arrumar os cards, já estão bugados, ajustar valores de gaps e margins de acordo com breakpoints diferentes
+// Para um breakpoint de 1000px já da para mudar o layout para mobile
