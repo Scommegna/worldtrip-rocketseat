@@ -5,6 +5,7 @@ import {
   HStack,
   Image as ChakraImage,
   SimpleGrid,
+  Stack,
   Text,
   Tooltip,
   useBreakpointValue,
@@ -48,7 +49,11 @@ export default function CountryPage() {
           {id}
         </Text>
       </Container>
-      <HStack maxWidth="100%" spacing="72px">
+      <Stack
+        maxWidth="100%"
+        spacing="72px"
+        direction={isWide ? "row" : "column"}
+      >
         <Container>
           <Text
             color="dark.headingAndText"
@@ -63,7 +68,11 @@ export default function CountryPage() {
           </Text>
         </Container>
         <Container>
-          <HStack spacing="42px">
+          <HStack
+            spacing="42px"
+            alignSelf={isWide ? "" : "center"}
+            justifyContent={isWide ? "" : "space-around"}
+          >
             <VStack spacing="-10px">
               <Text color="highlight" fontSize="48px" fontWeight="600">
                 50
@@ -93,13 +102,14 @@ export default function CountryPage() {
                     display="inline-block"
                     marginLeft="7px"
                     cursor="pointer"
+                    alt="more info"
                   />
                 </Tooltip>
               </Text>
             </VStack>
           </HStack>
         </Container>
-      </HStack>
+      </Stack>
       <Box textAlign="left" maxWidth="80%">
         <Heading
           fontWeight="500"
@@ -109,7 +119,7 @@ export default function CountryPage() {
         >
           Cidades +100
         </Heading>
-        <SimpleGrid columns={4} spacing="45px">
+        <SimpleGrid columns={isWide ? 4 : 1} spacing="45px">
           <CardComponent
             id={`${id}`}
             imageNumber="1"
