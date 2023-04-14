@@ -51,12 +51,7 @@ export default function CardComponent({
             >
               {city}
             </Heading>
-            <Text
-              color="dark.info"
-              fontWeight="500"
-              fontSize="16px"
-              // whiteSpace="nowrap"
-            >
+            <Text color="dark.info" fontWeight="500" fontSize="16px">
               {country}
             </Text>
           </VStack>
@@ -71,5 +66,3 @@ export default function CardComponent({
     </Card>
   );
 }
-
-// em 1200 mudar para o mobile

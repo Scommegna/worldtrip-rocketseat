@@ -31,7 +31,7 @@ export default function CountryPage() {
   });
 
   return (
-    <VStack as="main" spacing="80px">
+    <VStack as="main" spacing={isWide ? "80px" : "24px"}>
       <Container maxWidth="100%" padding="0" position="relative">
         <ChakraImage
           src={`/${id}/PageAssets/1.png`}
@@ -51,7 +51,7 @@ export default function CountryPage() {
       </Container>
       <Stack
         maxWidth="100%"
-        spacing="72px"
+        spacing={isWide ? "72px" : "24px"}
         direction={isWide ? "row" : "column"}
       >
         <Container>
@@ -59,7 +59,7 @@ export default function CountryPage() {
             color="dark.headingAndText"
             fontSize="24px"
             fontWeight="400"
-            lineHeight="36px"
+            lineHeight={isWide ? "36px" : "40px"}
           >
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit dicta
             odit quam ex totam et, illo est. At incidunt iste voluptatum.
@@ -71,7 +71,7 @@ export default function CountryPage() {
           <HStack
             spacing="42px"
             alignSelf={isWide ? "" : "center"}
-            justifyContent={isWide ? "" : "space-around"}
+            justifyContent={isWide ? "" : "space-between"}
           >
             <VStack spacing="-10px">
               <Text color="highlight" fontSize="48px" fontWeight="600">
@@ -110,12 +110,13 @@ export default function CountryPage() {
           </HStack>
         </Container>
       </Stack>
-      <Box textAlign="left" maxWidth="80%">
+      <Box textAlign="left" maxWidth={isWide ? "80%" : "100%"}>
         <Heading
           fontWeight="500"
           fontSize="36px"
           display="inline-block"
           marginBottom="40px"
+          marginTop={isWide ? "" : "40px"}
         >
           Cidades +100
         </Heading>
